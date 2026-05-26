@@ -483,6 +483,40 @@ small {
   gap: 8px;
 }
 
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profile-form-grid label {
+  display: grid;
+  gap: 8px;
+}
+
+.profile-form-grid span {
+  font-weight: 700;
+}
+
+.profile-form-grid input,
+.profile-form-grid textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+  color: var(--ink);
+}
+
+.profile-form-grid textarea {
+  min-height: 110px;
+  resize: none;
+}
+
+.profile-form-wide {
+  grid-column: 1 / -1;
+}
+
 .mock-form span {
   font-weight: 700;
 }
@@ -598,7 +632,8 @@ small {
   .form-grid,
   .signin-layout,
   .role-grid,
-  .matcher-grid {
+  .matcher-grid,
+  .profile-form-grid {
     grid-template-columns: 1fr;
   }
 }
