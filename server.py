@@ -1,3 +1,4 @@
+import os
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -11,8 +12,8 @@ class StaticHandler(SimpleHTTPRequestHandler):
 
 
 def main() -> None:
-    host = "127.0.0.1"
-    port = 8000
+    host = "0.0.0.0"
+    port = int(os.environ.get("PORT", "8000"))
     with ThreadingHTTPServer((host, port), StaticHandler) as server:
         print(f"BridgeHours starter site running at http://{host}:{port}")
         server.serve_forever()
