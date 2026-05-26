@@ -26,20 +26,22 @@
         <span class="brand-mark">BH</span>
         <span class="brand-copy">
           <strong>BridgeHours</strong>
-          <small>Community Help Network</small>
+          <small>Verified Volunteer Matching</small>
         </span>
       </a>
       <div class="topbar-actions">
         <button class="ghost-button" type="button" data-view-target="signin">Sign In</button>
-        <button class="primary-button" type="button" data-view-target="profiles">Create Profile</button>
+        <button class="primary-button" type="button" data-view-target="profiles">Get Started</button>
       </div>
     </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
 
     <div class="layout">
       <aside class="side-menu" id="sideMenu">
         <div class="menu-header">
           <p class="eyebrow">Navigate</p>
-          <button class="menu-close" id="menuClose" type="button" aria-label="Close navigation">x</button>
+          <button class="menu-close" id="menuClose" type="button" aria-label="Close navigation">Close</button>
         </div>
         <nav class="menu-nav">
           <button class="menu-link active" type="button" data-view-target="dashboard">Home</button>
@@ -48,30 +50,26 @@
           <button class="menu-link" type="button" data-view-target="profiles">Profiles</button>
           <button class="menu-link" type="button" data-view-target="signin">Sign In</button>
         </nav>
-        <div class="menu-note">
-          <p class="eyebrow">Current idea</p>
-          <p>Students earn verified hours. Neighbors get trusted help. Schools get clear records.</p>
-        </div>
       </aside>
 
       <main class="workspace">
         <section class="view active" id="dashboard">
           <div class="hero-card">
             <div class="hero-copy">
-              <p class="eyebrow">A more app-like first version</p>
-              <h1>Give students a better way to serve, and neighbors a safer way to ask.</h1>
+              <p class="eyebrow">BridgeHours</p>
+              <h1>Match trusted student volunteers with people who need real help.</h1>
               <p>
-                BridgeHours is a startup concept for matching high school volunteers with elderly
-                residents, people with disabilities, and local families who need practical help.
+                BridgeHours helps students earn verified service hours while supporting older adults,
+                people with disabilities, and families with practical day-to-day needs.
               </p>
               <div class="hero-actions">
                 <button class="primary-button" type="button" data-view-target="opportunities">Browse Opportunities</button>
-                <button class="ghost-button" type="button" data-view-target="request">Request Help</button>
+                <button class="ghost-button" type="button" data-view-target="profiles">Create Profile</button>
               </div>
             </div>
             <div class="hero-panel">
               <div class="status-card">
-                <p class="eyebrow">Live match example</p>
+                <p class="eyebrow">Featured opportunity</p>
                 <h2>2 student volunteers needed for light box moving</h2>
                 <ul>
                   <li>Oak Park</li>
@@ -82,11 +80,11 @@
               <div class="status-strip">
                 <div>
                   <strong>Verified</strong>
-                  <span>Profiles and requests reviewed</span>
+                  <span>Profiles and service requests reviewed</span>
                 </div>
                 <div>
                   <strong>Trackable</strong>
-                  <span>Hours confirmed after completion</span>
+                  <span>Volunteer hours confirmed after completion</span>
                 </div>
               </div>
             </div>
@@ -96,30 +94,30 @@
             <article class="panel-card">
               <p class="eyebrow">How it works</p>
               <ol class="step-list">
-                <li>Someone asks for help.</li>
-                <li>Local student volunteers get matched.</li>
-                <li>Work is completed and hours are certified.</li>
+                <li>Request help or create a volunteer profile.</li>
+                <li>Get matched with safe, local opportunities.</li>
+                <li>Complete the task and confirm service hours.</li>
               </ol>
             </article>
             <article class="panel-card">
-              <p class="eyebrow">Main user types</p>
+              <p class="eyebrow">Choose your role</p>
               <div class="role-grid">
                 <button class="role-card" type="button" data-role-select="volunteer" data-view-target="profiles">
                   <strong>I want to help</strong>
-                  <span>Student volunteers create a profile, pick causes, and track hours.</span>
+                  <span>Create a volunteer profile, find local opportunities, and track verified hours.</span>
                 </button>
                 <button class="role-card" type="button" data-role-select="requester" data-view-target="profiles">
                   <strong>I need help</strong>
-                  <span>Neighbors or caregivers post tasks and review volunteer support.</span>
+                  <span>Post a request, review matches, and confirm completed support.</span>
                 </button>
               </div>
             </article>
             <article class="panel-card">
-              <p class="eyebrow">Safety basics</p>
+              <p class="eyebrow">Why BridgeHours</p>
               <ul class="bullet-list">
-                <li>Unsafe or heavy-labor requests can be filtered out.</li>
-                <li>Adults, schools, and students can be verified in stages.</li>
-                <li>Every completed task can generate school-ready proof.</li>
+                <li>Safe, reviewed volunteer requests</li>
+                <li>Clear student and requester profiles</li>
+                <li>Verified hours for school service tracking</li>
               </ul>
             </article>
           </div>
@@ -205,8 +203,8 @@
         <section class="view" id="request">
           <div class="view-header">
             <div>
-              <p class="eyebrow">Help request flow</p>
-              <h2>Show requesters exactly what they would fill out.</h2>
+              <p class="eyebrow">Request help</p>
+              <h2>Post a request and get matched with local student volunteers.</h2>
             </div>
           </div>
 
@@ -233,14 +231,14 @@
               </div>
             </article>
             <article class="panel-card">
-              <h3>What happens next</h3>
+              <h3>Request review</h3>
               <ul class="bullet-list">
-                <li>An admin or trusted review flow checks the request.</li>
-                <li>Nearby students who fit the task get notified.</li>
-                <li>The requester confirms completion and volunteer hours.</li>
+                <li>Requests are reviewed before going live.</li>
+                <li>Qualified volunteers can respond based on fit and availability.</li>
+                <li>Hours are verified once the task is complete.</li>
               </ul>
               <div class="info-banner">
-                First version idea: keep this simple, safe, and easy to approve.
+                Designed for simple, safe, and trackable local help.
               </div>
             </article>
           </div>
@@ -250,7 +248,7 @@
           <div class="view-header">
             <div>
               <p class="eyebrow">Profiles</p>
-              <h2>Create an account based on whether you want to help or need help.</h2>
+              <h2>Create the right account for how you want to use BridgeHours.</h2>
             </div>
           </div>
 
@@ -268,10 +266,6 @@
                   <li>Availability, transportation radius, and interests</li>
                   <li>Volunteer hour history and verified completion log</li>
                 </ul>
-                <div class="profile-preview">
-                  <strong>Example:</strong>
-                  <span>Jordan, Junior, available Tue/Thu/Sat, interested in elderly support and tech help.</span>
-                </div>
 
                 <div class="interest-matcher">
                   <div class="matcher-header">
@@ -324,10 +318,6 @@
                   <li>Accessibility details and safe task guidelines</li>
                   <li>History of past requests and volunteer confirmations</li>
                 </ul>
-                <div class="profile-preview">
-                  <strong>Example:</strong>
-                  <span>Ms. Rivera, caregiver-assisted, requests light moving, grocery unloading, and seasonal cleanup.</span>
-                </div>
               </article>
             </div>
           </div>
@@ -337,7 +327,7 @@
           <div class="signin-layout">
             <article class="signin-card">
               <p class="eyebrow">Account access</p>
-              <h2>Sign in to manage your profile, tasks, and verified hours.</h2>
+              <h2>Sign in to manage your profile, requests, and verified hours.</h2>
               <div class="mock-form">
                 <label>
                   <span>Email</span>
@@ -356,15 +346,15 @@
 
             <article class="signin-side">
               <div class="panel-card compact-card">
-                <p class="eyebrow">Choose a path</p>
+                <p class="eyebrow">Get started</p>
                 <div class="role-grid single-column">
                   <button class="role-card" type="button" data-role-select="volunteer" data-view-target="profiles">
                     <strong>I want to help</strong>
-                    <span>Build a volunteer profile and collect certified hours.</span>
+                    <span>Create a volunteer account and start browsing opportunities.</span>
                   </button>
                   <button class="role-card" type="button" data-role-select="requester" data-view-target="profiles">
                     <strong>I need help</strong>
-                    <span>Build a requester profile and post safe community tasks.</span>
+                    <span>Create a requester profile and post a reviewed help request.</span>
                   </button>
                 </div>
               </div>
