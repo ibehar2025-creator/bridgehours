@@ -228,6 +228,11 @@ menuToggle.addEventListener("click", () => {
 
 menuClose.addEventListener("click", closeMenu);
 menuOverlay.addEventListener("click", closeMenu);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
 
 viewButtons.forEach((button) => {
   button.addEventListener("click", () => {
