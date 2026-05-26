@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BridgeHours | Volunteer Help That Matters</title>
+  <meta
+    name="description"
+    content="BridgeHours connects high school students with local neighbors who need practical help, creating safe, trackable volunteer opportunities."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <span class="brand-mark">BH</span>
+        <span class="brand-text">BridgeHours</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#safety">Safety</a>
+        <a href="#launch">Launch Plan</a>
+      </nav>
+      <a class="nav-cta" href="#launch">Start Building</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Volunteer hours, redesigned for real life</p>
+          <h1>Match student volunteers with neighbors who genuinely need help.</h1>
+          <p class="hero-text">
+            A startup concept for connecting high school students with elderly residents,
+            people with disabilities, and local families who need support with practical tasks.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#opportunities">See the Demo Board</a>
+            <a class="button button-secondary" href="#request-flow">View Request Flow</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>Safe</strong><span>Verified requests and student profiles</span></li>
+            <li><strong>Trackable</strong><span>Hours reviewed and certified</span></li>
+            <li><strong>Local</strong><span>Neighborhood-based matching</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-panel">
+          <div class="panel-card signal-card">
+            <span class="signal-label">Live request</span>
+            <h2>Box moving help needed this Saturday</h2>
+            <p>Older adult in Oak Park needs two student volunteers for 90 minutes.</p>
+            <div class="signal-meta">
+              <span>2 volunteers</span>
+              <span>1.5 hours each</span>
+              <span>Within 4 miles</span>
+            </div>
+          </div>
+
+          <div class="panel-card impact-card">
+            <p class="mini-label">Why this matters</p>
+            <p>
+              Students often need meaningful service hours. Communities already have real needs.
+              This site turns both sides into one organized system.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-grid" id="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">Core concept</p>
+          <h2>Simple enough to launch, strong enough to grow.</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <h3>Someone posts a need</h3>
+            <p>
+              A resident, caregiver, nonprofit, or family member submits a task like yard cleanup,
+              carrying groceries, organizing a room, or moving light boxes.
+            </p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <h3>Students get matched</h3>
+            <p>
+              Nearby volunteers browse the board or receive matches based on availability,
+              age limits, task type, and transportation range.
+            </p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <h3>Hours are certified</h3>
+            <p>
+              After the task is completed, the request owner confirms attendance and the platform
+              generates verified volunteer-hour records.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="request-flow" id="request-flow">
+        <div class="flow-copy">
+          <p class="eyebrow">Starter product view</p>
+          <h2>What the first version of the platform could focus on.</h2>
+          <p>
+            For an MVP, you do not need every feature. You mostly need clear requests,
+            good trust signals, and a clean way to claim hours.
+          </p>
+        </div>
+
+        <div class="request-mockup">
+          <div class="mockup-header">
+            <span>Post a help request</span>
+            <span>Estimated review: under 10 minutes</span>
+          </div>
+          <div class="mockup-grid">
+            <div class="mock-field">
+              <label>Task title</label>
+              <div class="field-display">Help move storage boxes from garage to hallway</div>
+            </div>
+            <div class="mock-field">
+              <label>Category</label>
+              <div class="field-display">Moving help</div>
+            </div>
+            <div class="mock-field">
+              <label>Support needed</label>
+              <div class="field-display">2 volunteers, no heavy lifting over 25 lbs</div>
+            </div>
+            <div class="mock-field">
+              <label>Date and time</label>
+              <div class="field-display">Saturday, 11:00 AM to 12:30 PM</div>
+            </div>
+            <div class="mock-field mock-field-wide">
+              <label>Safety notes</label>
+              <div class="field-display">Caregiver will be home. Front-door check-in required.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="opportunity-section" id="opportunities">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Demo opportunity board</p>
+            <h2>Browse the kinds of volunteer requests this website could support.</h2>
+          </div>
+          <div class="filters">
+            <label class="filter-pill active" data-filter="all">All</label>
+            <label class="filter-pill" data-filter="elderly">Elderly support</label>
+            <label class="filter-pill" data-filter="accessibility">Disability support</label>
+            <label class="filter-pill" data-filter="community">Community help</label>
+          </div>
+        </div>
+
+        <div class="search-row">
+          <input id="searchInput" type="text" placeholder="Search by task, area, or type of help">
+        </div>
+
+        <div class="opportunity-grid" id="opportunityGrid">
+          <article class="opportunity-card" data-category="elderly" data-search="boxes oak park moving elderly saturday">
+            <div class="card-topline">
+              <span class="tag">Elderly support</span>
+              <span class="distance">4 miles away</span>
+            </div>
+            <h3>Move boxes into first-floor hallway</h3>
+            <p>Oak Park resident needs two volunteers for light moving and shelf organizing.</p>
+            <ul>
+              <li>1.5 volunteer hours</li>
+              <li>Caregiver on-site</li>
+              <li>Saturday morning</li>
+            </ul>
+          </article>
+
+          <article class="opportunity-card" data-category="accessibility" data-search="wheelchair ramp garden cleanup accessibility west loop">
+            <div class="card-topline">
+              <span class="tag">Disability support</span>
+              <span class="distance">7 miles away</span>
+            </div>
+            <h3>Garden cleanup near wheelchair ramp</h3>
+            <p>Volunteer needed to clear leaves and sweep a pathway for safer entry access.</p>
+            <ul>
+              <li>2 volunteer hours</li>
+              <li>Outdoor work</li>
+              <li>Sunday afternoon</li>
+            </ul>
+          </article>
+
+          <article class="opportunity-card" data-category="community" data-search="grocery delivery family support pilsen community">
+            <div class="card-topline">
+              <span class="tag">Community help</span>
+              <span class="distance">3 miles away</span>
+            </div>
+            <h3>Assist with grocery unloading</h3>
+            <p>Local family needs help carrying groceries upstairs and organizing pantry items.</p>
+            <ul>
+              <li>1 volunteer hour</li>
+              <li>Indoor support</li>
+              <li>Weekday evening</li>
+            </ul>
+          </article>
+
+          <article class="opportunity-card" data-category="elderly" data-search="technology help phone setup senior lincoln park elderly">
+            <div class="card-topline">
+              <span class="tag">Elderly support</span>
+              <span class="distance">6 miles away</span>
+            </div>
+            <h3>Help set up a phone and reminders</h3>
+            <p>Senior resident needs patient help with contacts, calendar reminders, and text settings.</p>
+            <ul>
+              <li>1 volunteer hour</li>
+              <li>Supervised visit</li>
+              <li>After school</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="safety-section" id="safety">
+        <div class="section-heading">
+          <p class="eyebrow">Trust and safety</p>
+          <h2>The site should make parents, schools, and neighbors feel comfortable.</h2>
+        </div>
+
+        <div class="safety-grid">
+          <article class="safety-card">
+            <h3>Verified users</h3>
+            <p>Student profiles, guardians, schools, and requesters can all be verified in stages.</p>
+          </article>
+          <article class="safety-card">
+            <h3>Task guidelines</h3>
+            <p>Clear rules can block unsafe work, heavy labor, and tasks needing professional licenses.</p>
+          </article>
+          <article class="safety-card">
+            <h3>Hour approval</h3>
+            <p>Every completed task gets reviewed before hours are added to a student record.</p>
+          </article>
+          <article class="safety-card">
+            <h3>School-ready proof</h3>
+            <p>Verified logs can eventually export into a signed PDF or counselor-friendly format.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="launch-section" id="launch">
+        <div class="launch-card">
+          <div>
+            <p class="eyebrow">What to build next</p>
+            <h2>This starter site is a good first framework for pitching and testing the idea.</h2>
+          </div>
+          <div class="launch-list">
+            <p>Next logical features:</p>
+            <ul>
+              <li>Student sign-up and profile creation</li>
+              <li>Request submission form connected to a database</li>
+              <li>Admin review dashboard</li>
+              <li>Volunteer hour certification workflow</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
