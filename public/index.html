@@ -272,6 +272,49 @@
                   <strong>Example:</strong>
                   <span>Jordan, Junior, available Tue/Thu/Sat, interested in elderly support and tech help.</span>
                 </div>
+
+                <div class="interest-matcher">
+                  <div class="matcher-header">
+                    <p class="eyebrow">Interest matcher</p>
+                    <h3>Not sure what kind of volunteering fits you?</h3>
+                    <p>Answer a few quick questions and BridgeHours can suggest one or two good starting options.</p>
+                  </div>
+
+                  <div class="matcher-grid">
+                    <label>
+                      <span>What sounds most comfortable?</span>
+                      <select id="interestComfort">
+                        <option value="people">Talking and helping people directly</option>
+                        <option value="active">Hands-on physical tasks</option>
+                        <option value="tech">Tech or organization help</option>
+                      </select>
+                    </label>
+
+                    <label>
+                      <span>Where would you rather help?</span>
+                      <select id="interestSetting">
+                        <option value="indoor">Mostly indoors</option>
+                        <option value="outdoor">Mostly outdoors</option>
+                        <option value="either">Either is fine</option>
+                      </select>
+                    </label>
+
+                    <label>
+                      <span>Who do you feel most drawn to helping?</span>
+                      <select id="interestGroup">
+                        <option value="elderly">Older adults</option>
+                        <option value="accessibility">People with disabilities</option>
+                        <option value="community">Families and general community needs</option>
+                      </select>
+                    </label>
+                  </div>
+
+                  <button class="primary-button" id="matcherButton" type="button">Get Recommendations</button>
+
+                  <div class="matcher-results" id="matcherResults" aria-live="polite">
+                    <p class="matcher-placeholder">Your suggestions will show up here.</p>
+                  </div>
+                </div>
               </article>
 
               <article class="profile-panel" data-profile-panel="requester">
