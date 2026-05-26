@@ -29,7 +29,7 @@ body {
 }
 
 body {
-  overflow: auto;
+  overflow: hidden;
 }
 
 button,
@@ -43,11 +43,12 @@ button {
 }
 
 .app-shell {
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
   padding: 18px;
   gap: 16px;
+  overflow: hidden;
 }
 
 .topbar,
@@ -245,7 +246,7 @@ button {
 .workspace {
   min-height: 0;
   border-radius: 30px;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
 }
 
@@ -258,6 +259,16 @@ button {
 
 .view.active {
   display: block;
+}
+
+#dashboard {
+  overflow: hidden;
+}
+
+#dashboard.active {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 18px;
 }
 
 .hero-card {
@@ -362,13 +373,13 @@ small {
 .form-grid,
 .profile-layout,
 .signin-layout {
-  margin-top: 18px;
   display: grid;
   gap: 18px;
 }
 
 .dashboard-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0;
 }
 
 .panel-card,
@@ -651,6 +662,29 @@ small {
 }
 
 @media (max-width: 1080px) {
+  body {
+    overflow: auto;
+  }
+
+  .app-shell {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .workspace {
+    overflow: visible;
+  }
+
+  .view,
+  #dashboard {
+    overflow: auto;
+  }
+
+  #dashboard.active {
+    display: block;
+  }
+
   .layout {
     grid-template-columns: 1fr;
   }
