@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector("#menuToggle");
 const menuClose = document.querySelector("#menuClose");
 const sideMenu = document.querySelector("#sideMenu");
+const menuOverlay = document.querySelector("#menuOverlay");
 const viewButtons = document.querySelectorAll("[data-view-target]");
 const views = document.querySelectorAll(".view");
 const menuLinks = document.querySelectorAll(".menu-link");
@@ -154,11 +155,13 @@ const recommendationMap = {
 
 function closeMenu() {
   sideMenu.classList.remove("open");
+  menuOverlay.classList.remove("visible");
   menuToggle.setAttribute("aria-expanded", "false");
 }
 
 function openMenu() {
   sideMenu.classList.add("open");
+  menuOverlay.classList.add("visible");
   menuToggle.setAttribute("aria-expanded", "true");
 }
 
@@ -224,6 +227,7 @@ menuToggle.addEventListener("click", () => {
 });
 
 menuClose.addEventListener("click", closeMenu);
+menuOverlay.addEventListener("click", closeMenu);
 
 viewButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -259,10 +263,7 @@ searchInput.addEventListener("input", renderCards);
 matcherButton.addEventListener("click", renderRecommendations);
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 1080) {
-    sideMenu.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  }
+  closeMenu();
 });
 
 setActiveView("dashboard");
