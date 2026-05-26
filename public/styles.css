@@ -29,7 +29,7 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
 }
 
 button,
@@ -69,6 +69,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
   border-radius: 24px;
   padding: 14px 18px;
 }
@@ -125,6 +126,8 @@ button {
 
 .topbar-actions {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 10px;
 }
 
@@ -157,17 +160,27 @@ button {
 
 .layout {
   min-height: 0;
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 16px;
+  position: relative;
 }
 
 .side-menu {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  bottom: 18px;
+  width: min(320px, calc(100vw - 36px));
+  z-index: 30;
   border-radius: 28px;
   padding: 22px 18px;
   display: grid;
   align-content: start;
   gap: 22px;
+  transform: translateX(-120%);
+  transition: transform 180ms ease;
+}
+
+.side-menu.open {
+  transform: translateX(0);
 }
 
 .menu-header {
@@ -199,22 +212,31 @@ button {
   border-color: var(--green);
 }
 
-.menu-note {
-  padding: 16px;
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(215, 100, 59, 0.12), rgba(255, 255, 255, 0.5));
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 38, 47, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+  z-index: 25;
+}
+
+.menu-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .workspace {
   min-height: 0;
   border-radius: 30px;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
 .view {
   display: none;
-  height: 100%;
+  min-height: 100%;
   overflow: auto;
   padding: 6px 6px 18px;
 }
@@ -375,6 +397,7 @@ small {
 
 .filter-row {
   gap: 10px;
+  align-items: flex-start;
 }
 
 .filter-pill {
@@ -447,6 +470,7 @@ small {
 .signin-layout {
   grid-template-columns: 1.05fr 0.95fr;
   padding: 0 6px 6px;
+  align-items: start;
 }
 
 .mock-form {
@@ -474,6 +498,7 @@ small {
 
 .role-switcher {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -563,32 +588,8 @@ small {
 }
 
 @media (max-width: 1080px) {
-  body {
-    overflow: auto;
-  }
-
   .layout {
     grid-template-columns: 1fr;
-  }
-
-  .side-menu {
-    position: fixed;
-    top: 92px;
-    left: 18px;
-    bottom: 18px;
-    width: min(300px, calc(100vw - 36px));
-    transform: translateX(-120%);
-    transition: transform 180ms ease;
-    z-index: 20;
-  }
-
-  .side-menu.open {
-    transform: translateX(0);
-  }
-
-  .workspace,
-  .view {
-    overflow: visible;
   }
 
   .hero-card,
@@ -602,12 +603,6 @@ small {
   }
 }
 
-@media (min-width: 1081px) {
-  .menu-close {
-    display: none;
-  }
-}
-
 @media (max-width: 700px) {
   .app-shell {
     padding: 12px;
@@ -618,8 +613,7 @@ small {
     border-radius: 20px;
   }
 
-  .brand-copy small,
-  .ghost-button {
+  .brand-copy small {
     display: none;
   }
 
@@ -630,5 +624,16 @@ small {
   .signin-side,
   .profile-panel {
     padding: 18px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .topbar-actions .primary-button,
+  .topbar-actions .ghost-button {
+    flex: 1 1 160px;
+    justify-content: center;
   }
 }
