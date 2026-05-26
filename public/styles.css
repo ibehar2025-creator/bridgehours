@@ -272,14 +272,14 @@ button {
 .hero-card {
   border-radius: 30px;
   min-height: 100%;
-  padding: 40px;
+  padding: 28px 32px;
   display: grid;
   place-items: center;
   background:
-    radial-gradient(circle at 20% 20%, rgba(215, 100, 59, 0.24), transparent 24%),
-    radial-gradient(circle at 82% 18%, rgba(45, 104, 85, 0.2), transparent 20%),
-    radial-gradient(circle at 50% 100%, rgba(236, 158, 121, 0.24), transparent 28%),
-    linear-gradient(180deg, rgba(255, 247, 238, 0.98), rgba(244, 229, 213, 0.96)),
+    radial-gradient(circle at 16% 14%, rgba(215, 100, 59, 0.32), transparent 22%),
+    radial-gradient(circle at 84% 16%, rgba(45, 104, 85, 0.26), transparent 18%),
+    radial-gradient(circle at 50% 100%, rgba(236, 158, 121, 0.34), transparent 30%),
+    linear-gradient(180deg, rgba(255, 243, 229, 0.99), rgba(242, 221, 201, 0.98)),
     var(--panel);
 }
 
@@ -288,7 +288,7 @@ button {
   display: grid;
   justify-items: center;
   text-align: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .eyebrow {
@@ -313,8 +313,8 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
-  max-width: 12ch;
+  font-size: clamp(2.5rem, 4.8vw, 4.4rem);
+  max-width: 11ch;
 }
 
 h2 {
@@ -338,7 +338,7 @@ small {
 
 .hero-actions {
   gap: 12px;
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .hero-actions-centered {
@@ -347,34 +347,27 @@ small {
 }
 
 .hero-image-placeholder {
-  width: min(520px, 100%);
-  min-height: 290px;
-  padding: 22px;
+  width: min(580px, 100%);
+  height: clamp(220px, 34vh, 320px);
+  padding: 16px;
   border-radius: 30px;
   border: 1px dashed rgba(19, 38, 47, 0.18);
   background:
-    linear-gradient(135deg, rgba(215, 100, 59, 0.2), rgba(255, 250, 244, 0.82) 42%, rgba(45, 104, 85, 0.18)),
+    linear-gradient(135deg, rgba(215, 100, 59, 0.34), rgba(255, 250, 244, 0.82) 42%, rgba(45, 104, 85, 0.26)),
     var(--panel-strong);
-  display: grid;
-  place-items: center;
-  gap: 10px;
+  display: block;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-}
-
-.hero-image-placeholder strong {
-  color: var(--ink);
-  font-size: 1.1rem;
 }
 
 .hero-image-art {
   width: 100%;
-  height: 150px;
+  height: 100%;
   border-radius: 22px;
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 250, 244, 0.1)),
-    linear-gradient(135deg, rgba(215, 100, 59, 0.32), rgba(45, 104, 85, 0.22));
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 250, 244, 0.12)),
+    linear-gradient(135deg, rgba(215, 100, 59, 0.42), rgba(45, 104, 85, 0.3));
 }
 
 .hero-dot {
@@ -385,26 +378,26 @@ small {
 }
 
 .hero-dot-one {
-  width: 140px;
-  height: 140px;
-  left: 30px;
-  top: 24px;
+  width: 26%;
+  aspect-ratio: 1;
+  left: 8%;
+  top: 14%;
   background: rgba(255, 255, 255, 0.52);
 }
 
 .hero-dot-two {
-  width: 110px;
-  height: 110px;
-  right: 42px;
-  top: 20px;
+  width: 21%;
+  aspect-ratio: 1;
+  right: 10%;
+  top: 12%;
   background: rgba(255, 255, 255, 0.34);
 }
 
 .hero-dot-three {
-  width: 220px;
-  height: 90px;
-  left: calc(50% - 110px);
-  bottom: 18px;
+  width: 42%;
+  height: 24%;
+  left: 29%;
+  bottom: 12%;
   background: rgba(255, 250, 244, 0.42);
 }
 
@@ -795,7 +788,7 @@ small {
   }
 
   .hero-image-placeholder {
-    min-height: 240px;
+    height: 220px;
   }
 
   .topbar-actions {
